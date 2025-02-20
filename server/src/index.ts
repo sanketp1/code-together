@@ -11,7 +11,9 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "*"
+}));
 app.use(express.static(path.join(__dirname, "public"))); // Serve static files
 
 const server = http.createServer(app);
