@@ -12,7 +12,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: "*"
+  origin: "https://code-together-client-zeta.vercel.app"
 }));
 app.use(express.static(path.join(__dirname, "public"))); // Serve static files
 
